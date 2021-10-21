@@ -17,6 +17,12 @@ Contains files for REST Debugger tool available for free from Embarcadero websit
 
 You can use it to test the API and generate components to paste directly in your VCL or FMX projects.
 
+## Other samples
+
+### Learn To code Summer Camp 2021 - Day 2
+Some samples on Delphi internet libraries and componants. One project use the Delphi Books API to show books and details in a FireMonkey project.
+https://github.com/DeveloppeurPascal/LearnToCodeSummerCamp2021/tree/main/Day-2
+
 -----
 
 Si vous ne connaissez pas Delphi et le langage Pascal, profitez de la version Academic (pour les étudiants, enseignants et établissements d'enseignement) ou Community Edition (gratuite pour une utilisation personnelle) disponibles chez Embarcadero (rubrique "outils gratuits").
