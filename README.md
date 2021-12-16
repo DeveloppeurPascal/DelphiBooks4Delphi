@@ -17,6 +17,14 @@ Contains files for REST Debugger tool available for free from Embarcadero websit
 
 You can use it to test the API and generate components to paste directly in your VCL or FMX projects.
 
+## Folder "VCL-ListBooks"
+
+VCL sample with list of books and authors in a TListBox
+
+## Folder "VCL-ListBooks-Search"
+
+VCL sample with list of books and authors in a TFDMemTable to allow searching in the list.
+
 ## Other samples
 
 ### Learn To code Summer Camp 2021 - Day 2
