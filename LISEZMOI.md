@@ -1,6 +1,6 @@
 # Librairie client en Delphi pour l'API du site Delphi-Books.com
 
-[This page in english.](README.md)
+[This page in English.](README.md)
 
 Ensemble d'exemples d'utilisation en Delphi de l'API open data du site web Delphi Books.
 
