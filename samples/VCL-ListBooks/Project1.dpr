@@ -3,7 +3,7 @@ program Project1;
 uses
   Vcl.Forms,
   Unit1 in 'Unit1.pas' {Form1},
-  u_download in 'u_download.pas';
+  u_download in '..\..\lib-externes\librairies\src\u_download.pas';
 
 {$R *.res}
 
