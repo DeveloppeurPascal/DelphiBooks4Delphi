@@ -26,6 +26,7 @@ type
     /// Parcourt la liste des livres fournies par delphi-books.com et demande leurs infos
     /// </summary>
     procedure TraiterListeLivres(NomFichierJSON: string);
+    procedure DownloadFile(const id: integer);
 
     /// <summary>
     /// Reçoit les détails d'un livre et les ajoute à la liste à l'écran
@@ -60,15 +61,18 @@ implementation
 uses u_download, System.IOUtils, System.JSON, System.Threading;
 
 procedure TForm1.Button1Click(Sender: TObject);
+var
+  TempFileName: string;
 begin
+  TempFileName := tdownload_file.temporaryFileName('listelivres');
   Button1.Enabled := false;
   LanceAnimationAttente;
   tdownload_file.download('https://delphi-books.com/api/b/all.json',
-    tdownload_file.temporaryFileName('listelivres'),
-    procedure(NomFichierTemp: string)
+    TempFileName,
+    procedure
     begin // chargement ok
       try
-        TraiterListeLivres(NomFichierTemp);
+        TraiterListeLivres(TempFileName);
       finally
         ArreteAnimationAttente(ActiveLaListeDesLivres);
       end;
@@ -81,6 +85,32 @@ begin
           Button1.Enabled := true;
         end);
       raise exception.Create('Récupération de la liste des livres impossible.');
+    end);
+end;
+
+procedure TForm1.DownloadFile(const id: integer);
+var
+  TempFileName: string;
+begin
+  TempFileName := tdownload_file.temporaryFileName('livre-' + id.ToString);
+  tdownload_file.download('https://delphi-books.com/api/b/' + id.ToString +
+    '.json', TempFileName,
+    procedure
+    begin // chargement ok
+      try
+        TraiterLivre(TempFileName);
+      finally
+        ArreteAnimationAttente(ActiveLaListeDesLivres);
+      end;
+    end,
+    procedure
+    begin // problème réseau ou pas de réponse
+      ArreteAnimationAttente(
+        procedure
+        begin // Attention : c'est fait que si c'est le dernier thread qui plante
+          Button1.Enabled := true;
+        end);
+      raise exception.Create('Récupération d''un livre impossible.');
     end);
 end;
 
@@ -124,27 +154,7 @@ begin
                         LanceAnimationAttente;
                       end);
                     // Demande les infos liées à un livre au serveur
-                    tdownload_file.download('https://delphi-books.com/api/b/' +
-                      id.ToString + '.json',
-                      tdownload_file.temporaryFileName('livre-' + id.ToString),
-                      procedure(NomFichierTemp: string)
-                      begin // chargement ok
-                        try
-                          TraiterLivre(NomFichierTemp);
-                        finally
-                          ArreteAnimationAttente(ActiveLaListeDesLivres);
-                        end;
-                      end,
-                      procedure
-                      begin // problème réseau ou pas de réponse
-                        ArreteAnimationAttente(
-                          procedure
-                          begin // Attention : c'est fait que si c'est le dernier thread qui plante
-                            Button1.Enabled := true;
-                          end);
-                        raise exception.Create
-                          ('Récupération d''un livre impossible.');
-                      end);
+                    DownloadFile(id);
                   end;
                 end;
             finally
