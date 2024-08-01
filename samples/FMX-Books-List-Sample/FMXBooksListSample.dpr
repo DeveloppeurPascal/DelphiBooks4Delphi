@@ -5,7 +5,7 @@ uses
   FMX.Forms,
   uMain in 'uMain.pas' {frmMain},
   uDM in 'uDM.pas' {dm: TDataModule},
-  u_download in 'u_download.pas';
+  u_download in '..\..\lib-externes\librairies\src\u_download.pas';
 
 {$R *.res}
 
