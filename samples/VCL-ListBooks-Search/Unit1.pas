@@ -62,6 +62,7 @@ type
     /// Effectue la recherche des livres depuis la table en mémoire et l'affiche dans la listbox
     /// </summary>
     procedure LancerRecherche;
+    procedure DownloadFile(const ID: integer);
   public
     { Déclarations publiques }
   end;
@@ -76,15 +77,18 @@ implementation
 uses u_download, System.IOUtils, System.JSON, System.Threading;
 
 procedure TForm1.Button1Click(Sender: TObject);
+var
+  TempFileName: string;
 begin
   Button1.Enabled := false;
   LanceAnimationAttente;
+  TempFileName := tdownload_file.temporaryFileName('listelivres');
   tdownload_file.download('https://delphi-books.com/api/b/all.json',
-    tdownload_file.temporaryFileName('listelivres'),
-    procedure(NomFichierTemp: string)
+    TempFileName,
+    procedure
     begin // chargement ok
       try
-        TraiterListeLivres(NomFichierTemp);
+        TraiterListeLivres(TempFileName);
       finally
         ArreteAnimationAttente(ActiveLaListeDesLivres);
       end;
@@ -122,7 +126,7 @@ begin
       jsa: tjsonarray;
       jso: tjsonobject;
       jsv: tjsonvalue;
-      id: integer;
+      ID: integer;
     begin
       try
         try
@@ -137,34 +141,13 @@ begin
                   jso := jsv as tjsonobject;
                   if assigned(jso) then
                   begin
-                    id := jso.GetValue<integer>('id');
+                    ID := jso.GetValue<integer>('id');
                     tthread.Synchronize(nil,
                       procedure
                       begin
                         LanceAnimationAttente;
                       end);
-                    // Demande les infos liées à un livre au serveur
-                    tdownload_file.download('https://delphi-books.com/api/b/' +
-                      id.ToString + '.json',
-                      tdownload_file.temporaryFileName('livre-' + id.ToString),
-                      procedure(NomFichierTemp: string)
-                      begin // chargement ok
-                        try
-                          TraiterLivre(NomFichierTemp);
-                        finally
-                          ArreteAnimationAttente(ActiveLaListeDesLivres);
-                        end;
-                      end,
-                      procedure
-                      begin // problème réseau ou pas de réponse
-                        ArreteAnimationAttente(
-                          procedure
-                          begin // Attention : c'est fait que si c'est le dernier thread qui plante
-                            Button1.Enabled := true;
-                          end);
-                        raise exception.Create
-                          ('Récupération d''un livre impossible.');
-                      end);
+                    DownloadFile(ID);
                   end;
                 end;
             finally
@@ -281,6 +264,33 @@ begin
         FDMemTable1.fieldbyname('date').AsString);
     FDMemTable1.next;
   end;
+end;
+
+procedure TForm1.DownloadFile(const ID: integer);
+var
+  TempFileName: string;
+begin
+  // Demande les infos liées à un livre au serveur
+  TempFileName := tdownload_file.temporaryFileName('livre-' + ID.ToString);
+  tdownload_file.download('https://delphi-books.com/api/b/' + ID.ToString +
+    '.json', TempFileName,
+    procedure
+    begin // chargement ok
+      try
+        TraiterLivre(TempFileName);
+      finally
+        ArreteAnimationAttente(ActiveLaListeDesLivres);
+      end;
+    end,
+    procedure
+    begin // problème réseau ou pas de réponse
+      ArreteAnimationAttente(
+        procedure
+        begin // Attention : c'est fait que si c'est le dernier thread qui plante
+          Button1.Enabled := true;
+        end);
+      raise exception.Create('Récupération d''un livre impossible.');
+    end);
 end;
 
 procedure TForm1.SearchBox1InvokeSearch(Sender: TObject);
