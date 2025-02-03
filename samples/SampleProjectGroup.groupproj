@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C294C6D2-32E7-46D6-B508-11BCE6FA7C69}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FMX-Books-List-Sample\FMXBooksListSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VCL-ListBooks\VCLListBooks.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VCL-ListBooks-Search\VCLListBooksSearch.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FMXBooksListSample">
+        <MSBuild Projects="FMX-Books-List-Sample\FMXBooksListSample.dproj"/>
+    </Target>
+    <Target Name="FMXBooksListSample:Clean">
+        <MSBuild Projects="FMX-Books-List-Sample\FMXBooksListSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXBooksListSample:Make">
+        <MSBuild Projects="FMX-Books-List-Sample\FMXBooksListSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VCLListBooks">
+        <MSBuild Projects="VCL-ListBooks\VCLListBooks.dproj"/>
+    </Target>
+    <Target Name="VCLListBooks:Clean">
+        <MSBuild Projects="VCL-ListBooks\VCLListBooks.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLListBooks:Make">
+        <MSBuild Projects="VCL-ListBooks\VCLListBooks.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VCLListBooksSearch">
+        <MSBuild Projects="VCL-ListBooks-Search\VCLListBooksSearch.dproj"/>
+    </Target>
+    <Target Name="VCLListBooksSearch:Clean">
+        <MSBuild Projects="VCL-ListBooks-Search\VCLListBooksSearch.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLListBooksSearch:Make">
+        <MSBuild Projects="VCL-ListBooks-Search\VCLListBooksSearch.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FMXBooksListSample;VCLListBooks;VCLListBooksSearch"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FMXBooksListSample:Clean;VCLListBooks:Clean;VCLListBooksSearch:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FMXBooksListSample:Make;VCLListBooks:Make;VCLListBooksSearch:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
