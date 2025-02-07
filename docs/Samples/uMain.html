@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>VCLListBooks Application</title>
+<title>uMain Unit</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="DocInsight" />
@@ -49,7 +49,7 @@
       window.top.navigationFrame.postMessage(
         {
           action: "selectTocItem",
-          itemKey: "VCLListBooks",
+          itemKey: "uMain",
         },
         "*"
       );
@@ -61,31 +61,32 @@
 <input type="hidden" id="contentEditableControl" class="userDataStyle" value="false" />
 <input type="hidden" id="userDataCache" class="userDataStyle" />
 <input type="hidden" id="hiddenScrollOffset" />
-<input type="hidden" id="moduleName" value="" />
-<input type="hidden" id="elementId" value="N:VCLListBooks" />
+<input type="hidden" id="moduleName" value="FMXBooksListSample" />
+<input type="hidden" id="elementId" value="N:uMain" />
 <div class="topic">
 <div id="content">
-<h1 class="title">VCLList<wbr />Books Application</h1>
+<h1 class="title">u<wbr />Main Unit</h1>
 <div id="mainSection">
 <div id="mainBody">
-<div id="IDZUS53YDYC44JKF3B2NVYY5H4FIH02ZNLGHFHNSOBVXEL2NHRSUHHSection" class="section">
-<div id="IDZUS53YDYC44JKF3B2NVYY5H4FIH02ZNLGHFHNSOBVXEL2NHRSUHHHeader" class="sectionHeader">
+<div id="summarySection" class="section">
+<input class="tagName" type="hidden" value="summary" />
+<div id="summaryHeader" class="sectionHeader">
 <div>
 <a href="javascript:void(0)" class="collapsibleAreaHref" title="Collapse">
 <span class="collapsibleAreaIcon collapsibleAreaExpanding">
 <!---->
 </span>
-<span class="collapsibleAreaTitle">Units</span>
+<span class="collapsibleAreaTitle">Summary</span>
 </a>
 </div>
 </div>
-<div id="IDZUS53YDYC44JKF3B2NVYY5H4FIH02ZNLGHFHNSOBVXEL2NHRSUHHContent" class="sectionContent" contenteditable="false">
-<div class="tableSection"><table id="IDZUS53YDYC44JKF3B2NVYY5H4FIH02ZNLGHFHNSOBVXEL2NHRSUHH"><colgroup><col width="60px" /><col width="20%" /></colgroup><tbody><tr><th class="iconColumn"> </th><th class="nameColumn">Name</th><th class="descriptionColumn">Description</th></tr><tr class="member"><td><img src="themes/legacy/images/namespace.png" title="public unit" /></td><td class="memberId" data-id="N:Unit1"><input type="hidden" value="N:Unit1" /><a href="Unit1.html" title="Unit1">Unit1</a></td><td><div class="memberSummary" data-id="N:Unit1"><p /></div></td></tr><tr class="member"><td><img src="themes/legacy/images/namespace.png" title="public unit" /></td><td class="memberId" data-id="N:u_download"><input type="hidden" value="N:u_download" /><a href="u_download.html" title="u_download">u_download</a></td><td><div class="memberSummary" data-id="N:u_download"><p>
+<div id="summaryContent" class="sectionContent" contenteditable="false">
+<p>
 ***************************************************************************
 
-Librairies pour Delphi
+Delphi Books API client for Delphi
 
-Copyright 1990-2024 Patrick Prémartin under AGPL 3.0 license.
+Copyright 2020-2025 Patrick PREMARTIN under AGPL 3.0 license.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -97,31 +98,56 @@ DEALINGS IN THE SOFTWARE.
 
 ***************************************************************************
 
-This repository contains functions, procedures and classes to use in
-Delphi projects (console, VCL, FireMonkey and others). It's my "everything reuseable things" toolbox.
-
-The units to be used in your projects can be found in the "src" folder.
-Some features are explained on my blog or have been coded live on Twitch.
-
-Examples of use in the form of VCL or FireMonkey projects are available in
-the "samples" subfolder.
+Client library and samples programs showing how to use Delphi-Books.com
+open data API in Delphi and Pascal languages.
 
 ***************************************************************************
 
 Author(s) :
-     Patrick PREMARTIN
+Patrick PREMARTIN
 
 Site :
-     https://developpeur-pascal.fr/librairies-publiques.html
+https://delphibooks4delphi.developpeur-pascal.fr/
 
 Project site :
-     https://github.com/DeveloppeurPascal/librairies
+https://github.com/DeveloppeurPascal/DelphiBooks4Delphi
 
 ***************************************************************************
-File last update : 28/05/2024 12:19:15
-Signature : 630170f29491a7b7c73b302d6a5dfed7ba5e2aad
+File last update : 2025-02-05T20:59:20.279+01:00
+Signature : 4b5bb17dc728eace70afb5f6ee968804e687f573
 ***************************************************************************
-</p></div></td></tr></tbody></table><a href="#mainBody">Top</a></div>
+</p>
+</div>
+</div>
+<strong>Package</strong>:  <a href="FMXBooksListSample.html" title="">FMXBooksListSample</a><br />
+<div id="IDZA2FMBHBVODYMQAM35NWV5BKSJKXMNWE3OTDXHGXW5GAE1WJSKNSection" class="section">
+<div id="IDZA2FMBHBVODYMQAM35NWV5BKSJKXMNWE3OTDXHGXW5GAE1WJSKNHeader" class="sectionHeader">
+<div>
+<a href="javascript:void(0)" class="collapsibleAreaHref" title="Collapse">
+<span class="collapsibleAreaIcon collapsibleAreaExpanding">
+<!---->
+</span>
+<span class="collapsibleAreaTitle">Classes</span>
+</a>
+</div>
+</div>
+<div id="IDZA2FMBHBVODYMQAM35NWV5BKSJKXMNWE3OTDXHGXW5GAE1WJSKNContent" class="sectionContent" contenteditable="false">
+<div class="tableSection"><table id="IDZA2FMBHBVODYMQAM35NWV5BKSJKXMNWE3OTDXHGXW5GAE1WJSKN"><colgroup><col width="60px" /><col width="20%" /></colgroup><tbody><tr><th class="iconColumn"> </th><th class="nameColumn">Name</th><th class="descriptionColumn">Description</th></tr><tr class="member"><td><img src="themes/legacy/images/pubclass.gif" title="public class" /></td><td class="memberId" data-id="T:uMain.TfrmMain"><input type="hidden" value="T:uMain.TfrmMain" /><a href="uMain.TfrmMain.html" title="uMain.TfrmMain">TfrmMain</a></td><td><div class="memberSummary" data-id="T:uMain.TfrmMain"><p /></div></td></tr></tbody></table><a href="#mainBody">Top</a></div>
+</div>
+</div>
+<div id="IDMHMKIZ22BQ04BBRULYWQBXUD3FHZI55GGFGVXRK1OZULZWC23HEOSection" class="section">
+<div id="IDMHMKIZ22BQ04BBRULYWQBXUD3FHZI55GGFGVXRK1OZULZWC23HEOHeader" class="sectionHeader">
+<div>
+<a href="javascript:void(0)" class="collapsibleAreaHref" title="Collapse">
+<span class="collapsibleAreaIcon collapsibleAreaExpanding">
+<!---->
+</span>
+<span class="collapsibleAreaTitle">Variables</span>
+</a>
+</div>
+</div>
+<div id="IDMHMKIZ22BQ04BBRULYWQBXUD3FHZI55GGFGVXRK1OZULZWC23HEOContent" class="sectionContent" contenteditable="false">
+<div class="tableSection"><table id="IDMHMKIZ22BQ04BBRULYWQBXUD3FHZI55GGFGVXRK1OZULZWC23HEO"><colgroup><col width="60px" /><col width="20%" /></colgroup><tbody><tr><th class="iconColumn"> </th><th class="nameColumn">Name</th><th class="descriptionColumn">Description</th></tr><tr class="member"><td><img src="themes/legacy/images/pubfield.gif" title="public variable" /></td><td class="memberId" data-id="F:uMain.frmMain"><input type="hidden" value="F:uMain.frmMain" /><a href="uMain.frmMain.html" title="uMain.frmMain">frmMain</a></td><td><div class="memberSummary" data-id="F:uMain.frmMain"><p /></div></td></tr></tbody></table><a href="#mainBody">Top</a></div>
 </div>
 </div>
 </div>
