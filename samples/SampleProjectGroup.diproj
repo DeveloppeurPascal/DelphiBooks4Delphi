@@ -27,11 +27,11 @@
   <Outputs>
     <Output Type="HTML">
       <Active>true</Active>
-      <OutputDirectory>..\docs</OutputDirectory>
+      <OutputDirectory>..\docs\Samples</OutputDirectory>
     </Output>
     <Output Type="CHM">
       <Active>true</Active>
-      <OutputFileName>..\DelphiBooks4Delphi.chm</OutputFileName>
+      <OutputFileName>.\DelphiBooks4Delphi.chm</OutputFileName>
     </Output>
     <Output Type="MSHELP2">
       <Active>false</Active>
