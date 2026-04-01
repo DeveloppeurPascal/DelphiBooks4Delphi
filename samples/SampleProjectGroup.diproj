@@ -4,20 +4,22 @@
   <Summary>Client library and samples programs showing how to use Delphi-Books.com open data API in Delphi and Pascal languages.</Summary>
   <Author>Patrick PREMARTIN</Author>
   <Email>patrick@premartin.fr</Email>
-  <Copyright>(c) 2020-2025 Patrick PREMARTIN</Copyright>
+  <Copyright>(c) 2020-2026 Patrick PREMARTIN</Copyright>
   <Comment/>
   <Language>2057</Language>
   <Charset>1</Charset>
+  <Theme>Learn</Theme>
   <HeaderHtml>&lt;%TopicTitle%&gt;</HeaderHtml>
-  <FooterHtml>&lt;a href="https://delphibooks4delphi.developpeur-pascal.fr" target="_blank"&gt;Delphi Books API client for Delphi&lt;/a&gt; (c) 2020-2025 &lt;a href="https://patrick.premartin.fr" target="_blank"&gt;Patrick PREMARTIN&lt;/a&gt; - Powered by &lt;a href="https://devjetsoftware.com/products/documentation-insight/" target="_blank"&gt;DocInsight&lt;/a&gt;</FooterHtml>
+  <FooterHtml>&lt;a href="https://delphibooks4delphi.developpeur-pascal.fr" target="_blank"&gt;Delphi Books API client for Delphi&lt;/a&gt; (c) 2020-2026 &lt;a href="https://patrick.premartin.fr" target="_blank"&gt;Patrick PREMARTIN&lt;/a&gt; - Powered by &lt;a href="https://devjetsoftware.com/products/documentation-insight/" target="_blank"&gt;DocInsight&lt;/a&gt;</FooterHtml>
   <CustomDefines/>
+  <GlobalSearchPaths>false</GlobalSearchPaths>
   <ShowImplementationSection>false</ShowImplementationSection>
   <ShowPrivateMembers>false</ShowPrivateMembers>
   <ShowProtectedMembers>true</ShowProtectedMembers>
   <ShowInheritedMembers>true</ShowInheritedMembers>
   <ShowPropertyAccessors>true</ShowPropertyAccessors>
   <FileNamePolicy>0</FileNamePolicy>
-  <CompilerVersion>27</CompilerVersion>
+  <CompilerVersion>28</CompilerVersion>
   <TargetPlatform>0</TargetPlatform>
   <Sources>
     <Source>.\FMX-Books-List-Sample\FMXBooksListSample.dpr</Source>
