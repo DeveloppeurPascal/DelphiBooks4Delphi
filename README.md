@@ -36,7 +36,7 @@ VCL sample with list of books and authors in a TFDMemTable to allow searching in
 
 ### Twitch
 
-Follow my live game development coding sessions on [my Twitch channel](https://www.twitch.tv/patrickpremartin) or as replays on [Serial Streameur](https://serialstreameur.fr/delphi-books.php) mostly in French.
+Follow my development streams of software, video games, mobile applications and websites on [my Twitch channel](https://www.twitch.tv/patrickpremartin) or as replays on [Serial Streameur](https://serialstreameur.fr) mostly in French.
 
 ## Source code installation
 
@@ -52,9 +52,9 @@ I use comments in [XMLDOC](https://docwiki.embarcadero.com/RADStudio/en/XML_Docu
 
 I regularly use the [DocInsight](https://devjetsoftware.com/products/documentation-insight/) tool to enter them and check their formatting.
 
-Documentation is exported in HTML by [DocInsight](https://devjetsoftware.com/products/documentation-insight/) or [PasDoc](https://pasdoc.github.io) to the /docs folder of the repository. You can also [access it online](https://developpeurpascal.github.io/DelphiBooks4Delphi) through the hosting offered by GitHub Pages.
+Documentation is exported in HTML by [DocInsight](https://devjetsoftware.com/products/documentation-insight/) or [PasDoc](https://pasdoc.github.io) to the /docs folder of the repository. You can also [access it online](https://delphibooks4delphi.developpeur-pascal.fr/documentation.html) on the project website.
 
-Further information (tutorials, articles, videos, FAQ, talks and links) can be found on [the project website](https://delphibooks4delphi.developpeur-pascal.fr/) or [the project devlog](https://developpeur-pascal.fr/delphi-books.html).
+Further information (tutorials, articles, videos, FAQ, talks and links) can be found on [the project website](https://delphibooks4delphi.developpeur-pascal.fr) or [the project devlog](https://developpeur-pascal.fr/delphi-books.html).
 
 If you need explanations or help in understanding or using parts of this project in yours, please [contact me](https://developpeur-pascal.fr/nous-contacter.php). I can either direct you to an online resource, or offer you assistance in the form of a paid or free service, depending on the case. You can also contact me at a conference or during an online presentation.
 
@@ -77,7 +77,7 @@ You are free to use the contents of this code repository anywhere provided :
 * distribute the modifications made to the files provided in this AGPL-licensed project (leaving the original copyright notices (author, link to this repository, license) must be supplemented by your own)
 * to distribute the source code of your creations under the AGPL license.
 
-If this license doesn't suit your needs (especially for a commercial project) I also offer [classic licenses for developers and companies](https://delphibooks4delphi.developpeur-pascal.fr/).
+If this license doesn't suit your needs (especially for a commercial project) I also offer [classic licenses for developers and companies](https://delphibooks4delphi.developpeur-pascal.fr).
 
 Some elements included in this repository may depend on third-party usage rights (images, sounds, etc.). They are not reusable in your projects unless otherwise stated.
 
