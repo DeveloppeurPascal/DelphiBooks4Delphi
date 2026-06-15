@@ -28,13 +28,13 @@
   Patrick PREMARTIN
 
   Site :
-  https://delphibooks4delphi.developpeur-pascal.fr/
+  https://delphi-books.com/opendata.html
 
   Project site :
   https://github.com/DeveloppeurPascal/DelphiBooks4Delphi
 
   ***************************************************************************
-  File last update : 2026-04-01T17:40:46.000+02:00
+  File last update : 2026-06-15T18:26:02.419+02:00
   Signature : ec11a7631f1a25e66019151fd17102ee828f1c58
   ***************************************************************************
 *)
