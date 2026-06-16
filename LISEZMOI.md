@@ -2,6 +2,13 @@
 
 [This page in English.](README.md)
 
+> [!WARNING]
+> Suite à la décision de Microsoft de fondre GitHub dans sa division IA à l'été 2025 et donc de ne considérer ce que nous publions dessus que comme une source d'entrainement de ses modèles sans contre partie (à part l'hébergement des codes sources) ou nous abreuver de leurs injonctions à utiliser Copilot partout, pour tout et n'importe quoi, j'ai pris la décision d'arrêter la maintenance des dépôts ici.
+>
+> La maintenance de ce projet est déplacée vers Codeberg sur https://codeberg.org/Delphi-Books
+>
+> Codeberg est un hébergement associatif situé en Europe, respectueux des développeurs, de la licence de chaque projet et de la vie privée des personnes qui s'y connectent.
+
 Ensemble d'exemples d'utilisation en Delphi de l'API open data du site web Delphi Books.
 
 Ce dépôt de code contient un projet développé en langage Pascal Objet sous Delphi. Vous ne savez pas ce qu'est Dephi ni où le télécharger ? Vous en saurez plus [sur ce site web](https://delphi-resources.developpeur-pascal.fr/).
@@ -40,7 +47,7 @@ Suivez mes streams de développement de logiciels, jeux vidéo, applications mob
 
 ## Installation des codes sources
 
-Pour télécharger ce dépôt de code il est recommandé de passer par "git" mais vous pouvez aussi télécharger un ZIP directement depuis [son dépôt GitHub](https://github.com/DeveloppeurPascal/DelphiBooks4Delphi).
+Pour télécharger ce dépôt de code il est recommandé de passer par "git" mais vous pouvez aussi télécharger un ZIP directement depuis [son dépôt GitHub](https://codeberg.org/Delphi-Books/DelphiBooks4Delphi).
 
 Ce projet utilise des dépendances sous forme de sous modules. Ils seront absents du fichier ZIP. Vous devrez les télécharger à la main.
 
@@ -66,7 +73,7 @@ Normalement mes librairies et composants doivent aussi fonctionner au moins sur 
 
 Aucune garantie de compatibilité avec des versions antérieures n'est fournie même si je m'efforce de faire du code propre et ne pas trop utiliser les nouvelles façons d'écrire dedans (type inference, inline var et multilines strings).
 
-Si vous détectez des anomalies sur des versions antérieures n'hésitez pas à [les rapporter](https://github.com/DeveloppeurPascal/DelphiBooks4Delphi/issues) pour que je teste et tente de corriger ou fournir un contournement.
+Si vous détectez des anomalies sur des versions antérieures n'hésitez pas à [les rapporter](https://codeberg.org/Delphi-Books/DelphiBooks4Delphi/issues) pour que je teste et tente de corriger ou fournir un contournement.
 
 ## Licence d'utilisation de ce dépôt de code et de son contenu
 
@@ -85,7 +92,7 @@ Les codes sources de ce dépôt de code comme leur éventuelle version compilée
 
 ## Comment demander une nouvelle fonctionnalité, signaler un bogue ou une faille de sécurité ?
 
-Si vous voulez une réponse du propriétaire de ce dépôt la meilleure façon de procéder pour demander une nouvelle fonctionnalité ou signaler une anomalie est d'aller sur [le dépôt de code sur GitHub](https://github.com/DeveloppeurPascal/DelphiBooks4Delphi) et [d'ouvrir un ticket](https://github.com/DeveloppeurPascal/DelphiBooks4Delphi/issues).
+Si vous voulez une réponse du propriétaire de ce dépôt la meilleure façon de procéder pour demander une nouvelle fonctionnalité ou signaler une anomalie est d'aller sur [le dépôt de code sur GitHub](https://codeberg.org/Delphi-Books/DelphiBooks4Delphi) et [d'ouvrir un ticket](https://codeberg.org/Delphi-Books/DelphiBooks4Delphi/issues).
 
 Si vous avez trouvé une faille de sécurité n'en parlez pas en public avant qu'un correctif n'ait été déployé ou soit disponible. [Contactez l'auteur du dépôt en privé](https://developpeur-pascal.fr/nous-contacter.php) pour expliquer votre trouvaille.
 
